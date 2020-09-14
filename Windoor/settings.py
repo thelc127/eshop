@@ -119,5 +119,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = "/ABCD/"
-MEDIA_ROOT = "/BASE_DIR/"
+MEDIA_URL = "/image/products/"
+MEDIA_ROOT = BASE_DIR
