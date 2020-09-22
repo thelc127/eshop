@@ -6,5 +6,6 @@ from .models.product import Product
 # Create your views here.
 def index(request):
 	p = Product.get_all_products()
-	return render(request, 'index.html', {'products' : p})
+	#return render(request, 'orders/order.html')
+	return render(request, 'base.html', {'products' : p})
 	
