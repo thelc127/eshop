@@ -3,19 +3,31 @@
 	{% block content %}
 	<!---- body-----> 
 	<div class = "container-fluid mt-5">
-	<div class = "row mx-auto">
-	{% for product in products %}
-	<div class="card mx-auto mb-3" style="width: 18rem;">
-		<img src="{{product.image.url}}" class="card-img-top" alt="...">
-		<div class="card-body">
-		<h5 class="card-title"> {{product.name}} </h5>
-		<p class="card-text"> <b> Price : Rs. {{product.price}}</b></p>
-		<a href="#" class="btn btn-primary"> Add to cart </a>
+		<div class = "row">
+			<!--- filter -->
+			<div class = "col-lg-2 mx-auto">
+				<div class="list-group">
+					{% for category in categories %}
+					<a class="list-group-item"> {{category.name}}</a>
+					{% endfor %}
+				</div>
+			</div>
+			<!--- all products -->
+			<div id = "products" class ="col-lg-10 mx-auto">
+				<div class = "row mx-auto">
+					{% for product in products %}
+					<div class="card mx-auto mb-3" style="width: 18rem;">
+						<img src="{{product.image.url}}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title"> {{product.name}} </h5>
+							<p class="card-text"> <b> Price : Rs. {{product.price}}</b></p>
+							<a href="#" class="btn btn-primary"> Add to cart </a>
+						</div>
+					</div>                                                                                  
+					{% endfor %}
+				</div>
+			</div>
 		</div>
-	</div>
-	{% endfor %}
-	</div>
-	</div>
 	{% endblock %}
 
 
